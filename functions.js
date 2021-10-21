@@ -1,4 +1,4 @@
-const autoLocate = () => {
+const locate = () => {
   navigator.geolocation.getCurrentPosition(position => {
     const { latitude } = position.coords;
     const { longitude } = position.coords;
@@ -18,7 +18,14 @@ const autoLocate = () => {
         accessToken: token,
       }
     ).addTo(map);
-
     let marker = L.marker(coords).addTo(map);
+
+    map.on("click", function (mapEvent) {
+      map.removeLayer(marker);
+      const { lat, lng } = mapEvent.latlng;
+      marker = L.marker([lat, lng], { draggable: true }).addTo(map);
+
+      map.addLayer(marker);
+    });
   });
 };
