@@ -270,13 +270,12 @@ input {
   .weather {
     margin-left: 30px;
   }
-  .map {
+  #map {
     display: inline;
     position: fixed;
     z-index: 10;
     left: 30%;
     top: 20%;
-    background-color: #fff;
     height: 70%;
     width: 65%;
     border-radius: 20px;
@@ -335,13 +334,13 @@ input {
   .weather {
     margin-left: 30px;
   }
-  .map {
+  #map {
     display: inline;
     position: fixed;
     z-index: 10;
     left: 30%;
     top: 20%;
-    background-color: #fff;
+
     height: 70%;
     width: 65%;
     border-radius: 20px;
