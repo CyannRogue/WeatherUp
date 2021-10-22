@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "cSpell.words": [
     "ampm",
     "Dayforcast",
@@ -11,4 +12,7 @@
 =======
   "cSpell.words": ["degc", "Mapbox"]
 >>>>>>> parent of 4317712 (fixed css V1)
+=======
+  "cSpell.words": ["degc", "latlng", "Mapbox"]
+>>>>>>> parent of 4ee4e06 (addad JS on UI V1)
 }
