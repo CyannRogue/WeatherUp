@@ -183,8 +183,10 @@ input {
   .city {
     font-size: 6rem;
   }
-  .day-data {
-    font-size: 3rem;
+  .day-data,
+  .day-data .day {
+    font-size: 1.5rem;
+    align-self: flex-end;
   }
   .temp {
     font-size: 9rem;
@@ -245,6 +247,7 @@ input {
   .middle2,
   .last {
     align-self: start;
+    width: 30%;
   }
   .last {
     margin-left: 20px;
@@ -266,15 +269,65 @@ input {
     transition-property: none !important;
     display: inline;
     position: fixed;
-    z-index: 10;
+    z-index: 3;
     left: 30%;
     top: 20%;
     height: 70%;
     width: 65%;
     border-radius: 20px;
   }
-}
 
+  .temp {
+    font-size: 5rem;
+    font-weight: 700;
+  }
+  .line {
+    border: #fff solid;
+    border-radius: 10px;
+    width: 10rem;
+    height: 0.7px;
+    margin: 0px;
+  }
+  .search {
+    width: 10rem;
+    height: 1.5rem;
+    margin: 0 20px;
+  }
+  input {
+    font-size: 1rem;
+    margin: 0;
+    width: 10rem;
+    height: 1.5rem;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .condition .weather-icon {
+    width: 2rem;
+    height: auto;
+  }
+  .condition {
+    margin: 10%;
+  }
+  .range {
+    font-size: 1rem;
+  }
+
+  .forecast .weather-icon,
+  .forecast .day {
+    width: 1.5rem;
+    height: auto;
+    text-align: center;
+    margin: 0 20px;
+    justify-content: center;
+  }
+  .last {
+    margin: 0;
+  }
+  .search {
+    justify-content: center;
+  }
+}
 /* // Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .top,
@@ -309,7 +362,8 @@ input {
     font-size: 3rem;
     align-self: flex-end;
   }
-  .day-data {
+  .day-data,
+  .day-data .day {
     font-size: 1.5rem;
     align-self: flex-end;
   }
@@ -318,18 +372,15 @@ input {
   .last {
     align-self: start;
   }
-  .last {
-    margin-left: 20px;
-  }
+
   .condition {
     margin-left: 20px;
   }
-  .day {
-    font-size: 1rem;
-  }
+
   .weather {
     margin-left: 30px;
   }
+
   #map {
     -o-transition-property: none !important;
     -moz-transition-property: none !important;
@@ -338,7 +389,7 @@ input {
     transition-property: none !important;
     display: inline;
     position: fixed;
-    z-index: 10;
+    z-index: 3;
     left: 30%;
     top: 20%;
 
