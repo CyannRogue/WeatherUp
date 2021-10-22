@@ -5,10 +5,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .web {
@@ -142,6 +142,12 @@ input {
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 320px) {
+  * {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+  }
   .condition,
   .forecast .weather-icon,
   section,
@@ -157,13 +163,16 @@ input {
     flex-grow: 1;
     margin: 0;
   }
-  #map {
-    display: none;
-  }
 }
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  * {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+  }
   .condition,
   .forecast .weather-icon,
   section,
@@ -210,13 +219,16 @@ input {
     width: 20rem;
     height: 3rem;
   }
-  #map {
-    display: none;
-  }
 }
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  * {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+  }
   .condition,
   .forecast .weather-icon,
   section,
@@ -330,10 +342,7 @@ input {
 }
 /* // Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  .top,
-  .middle,
-  .middle2,
-  .last {
+  * {
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
