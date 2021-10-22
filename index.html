@@ -24,32 +24,22 @@
     <section class="top">
       <a href="#" class="logo">WeatherUp</a>
       <div class="period-container">
-        <div class="city">Cape Town</div>
+        <div class="city" id="city"></div>
         <div class="day-data">
-          <div class="day">Monday</div>
-          <div class="month">June</div>
-          <div class="date">18</div>
+          <div class="day" id="day"></div>
+          <div class="month"></div>
+          <div class="date"></div>
         </div>
       </div>
     </section>
-    <section class="middle">
-      <div class="weather">
-        <div class="temp-container">
-          <div class="temp">25&degc</div>
-          <div class="line"></div>
-        </div>
-
-        <div class="condition">
-          <img src="/icons/sun.svg" alt="icon" class="weather-icon" />
-          <div class="title">Sunny</div>
-          <div class="range">20&degc / 27&degc</div>
-        </div>
-      </div>
+    <section class="middle" id="content">
+      <!-- // data -->
     </section>
     <section class="middle2">
       <div class="search">
-        <input type="text" placeholder="Search" id="content" />
+        <input type="text" placeholder="Search" id="searchUser" />
       </div>
+      <button type="button" name="submit" id="submit">Submit</button>
     </section>
     <section class="last">
       <section class="week">

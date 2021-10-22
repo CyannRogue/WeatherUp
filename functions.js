@@ -1,3 +1,15 @@
+class Fetch {
+  async getCurrent(input) {
+    const response = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${API_KEY}`
+    );
+    const data = await response.json();
+    console.log(data);
+
+    return data;
+  }
+}
+
 const locate = () => {
   navigator.geolocation.getCurrentPosition(position => {
     const { latitude } = position.coords;
@@ -32,15 +44,3 @@ const locate = () => {
     });
   });
 };
-
-class Fetch {
-  async getCurrent(input) {
-    const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${API_KEY}`
-    );
-    const data = await response.json();
-    console.log();
-    data;
-    return data;
-  }
-}
