@@ -163,6 +163,10 @@ input {
     flex-grow: 1;
     margin: 0;
   }
+
+  #map {
+    display: none;
+  }
 }
 
 /* // Medium devices (tablets, 768px and up) */
@@ -217,6 +221,9 @@ input {
     width: 20rem;
     height: 3rem;
   }
+  #map {
+    display: none;
+  }
 }
 
 /* // Large devices (desktops, 992px and up) */
@@ -257,19 +264,57 @@ input {
   .middle2,
   .last {
     align-self: start;
+    justify-content: center;
+    width: 30%;
   }
-  .last {
-    margin-left: 20px;
+  .temp {
+    font-size: 5rem;
+    font-weight: 700;
   }
-  .condition {
-    margin-left: 20px;
+
+  .line {
+    border: #fff solid;
+    border-radius: 10px;
+    width: 10rem;
+    height: 1px;
+    margin: 0;
+  }
+  .title {
+    font-size: 1rem;
+  }
+  .condition .weather-icon {
+    width: 2rem;
+    height: auto;
+  }
+
+  .range {
+    font-size: 1rem;
+  }
+
+  .search {
+    width: 10rem;
+    height: 2rem;
+    margin: 0 20px;
+  }
+  input {
+    font-size: 1rem;
+    margin: 0;
+    width: 10rem;
+    height: 2rem;
+  }
+
+  .forecast .weather-icon,
+  .forecast .day {
+    width: 2rem;
+    height: auto;
+    text-align: center;
+
+    justify-content: center;
   }
   .day {
     font-size: 1rem;
   }
-  .weather {
-    margin-left: 30px;
-  }
+
   #map {
     -o-transition-property: none !important;
     -moz-transition-property: none !important;
@@ -304,7 +349,6 @@ input {
   }
   .logo {
     align-self: flex-start;
-    font-size: 2.5rem;
     width: 20%;
   }
   .period-container {
@@ -326,19 +370,57 @@ input {
   .middle2,
   .last {
     align-self: start;
+    justify-content: center;
+    width: 30%;
   }
-  .last {
-    margin-left: 20px;
+  .temp {
+    font-size: 8rem;
+    font-weight: 700;
   }
-  .condition {
-    margin-left: 20px;
+
+  .line {
+    border: #fff solid;
+    border-radius: 10px;
+    width: 15rem;
+    height: 1px;
+    margin: 0 10px;
+  }
+  .title {
+    font-size: 2.8rem;
+  }
+  .condition .weather-icon {
+    width: 2.8rem;
+    height: auto;
+  }
+
+  .range {
+    font-size: 2rem;
+  }
+
+  .search {
+    width: 14rem;
+    height: 3rem;
+    margin: 0 20px;
+  }
+  input {
+    font-size: 2rem;
+    margin: 0;
+    width: 14rem;
+    height: 3rem;
+  }
+
+  .forecast .weather-icon,
+  .forecast .day {
+    width: 2rem;
+    height: auto;
+    text-align: center;
+
+    justify-content: center;
   }
   .day {
     font-size: 1rem;
   }
-  .weather {
-    margin-left: 30px;
-  }
+
   #map {
     -o-transition-property: none !important;
     -moz-transition-property: none !important;
@@ -350,7 +432,6 @@ input {
     z-index: 10;
     left: 30%;
     top: 20%;
-
     height: 70%;
     width: 65%;
     border-radius: 20px;
