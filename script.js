@@ -1,5 +1,3 @@
-locate();
-
 ///////////////////////////////////
 
 const ft = new Fetch();
@@ -16,7 +14,9 @@ button.addEventListener("click", () => {
   ft.getCurrent(currentVal).then(data => {
     //call a UI method
     ui.populateUI(data);
+    ui.mapUI(data);
+
     //save
-    ui.saveToLS(data);
+    // ui.saveToLS(data);
   });
 });

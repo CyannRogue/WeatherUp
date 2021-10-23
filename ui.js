@@ -62,7 +62,7 @@ class UI {
   populateUI(data) {
     this.uiContainer.innerHTML = `<div class="weather">
     <div class="temp-container">
-      <div class="temp">25&degc</div>
+      <div class="temp">${data.main.temp}&degc</div>
       <div class="line"></div>
     </div>
 
@@ -72,5 +72,40 @@ class UI {
       <div class="range">${data.main.temp_max}&degc / ${data.main.temp_min}&degc</div>
     </div>`;
     this.cityEl.innerHTML = `${data.name}`;
+  }
+  mapUI(data) {
+    const { lat } = data.coord;
+    const { lon } = data.coord;
+
+    var container = L.DomUtil.get("map");
+    if (container != null) {
+      container._leaflet_id = null;
+    }
+    const coordinates = [lat, lon];
+    let map = L.map("map").setView(coordinates, 13);
+
+    //Map layout
+    L.tileLayer(
+      `https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${token}`,
+      {
+        attribution:
+          'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        id: "mapbox/streets-v11",
+        tileSize: 512,
+        zoomOffset: -1,
+        accessToken: token,
+      }
+    ).addTo(map);
+    let marker = L.marker(coordinates).addTo(map);
+
+    map.on("click", function (mapEvent) {
+      map.removeLayer(marker);
+      const { lat, lng } = mapEvent.latlng;
+      marker = L.marker([lat, lng], { draggable: true }).addTo(map);
+      map.addLayer(marker);
+    });
+    map.invalidateSize();
+    // map.remove();
   }
 }
