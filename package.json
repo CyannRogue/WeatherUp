@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@maptiler/geocoder": "^1.1.0",
     "leaflet": "^1.7.1"
   }
 }

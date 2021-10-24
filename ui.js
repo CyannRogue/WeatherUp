@@ -77,7 +77,7 @@ class UI {
     const { lat } = data.coord;
     const { lon } = data.coord;
 
-    var container = L.DomUtil.get("map");
+    let container = L.DomUtil.get("map");
     if (container != null) {
       container._leaflet_id = null;
     }
@@ -102,10 +102,11 @@ class UI {
     map.on("click", function (mapEvent) {
       map.removeLayer(marker);
       const { lat, lng } = mapEvent.latlng;
+
+      console.log(lat, lng);
       marker = L.marker([lat, lng], { draggable: true }).addTo(map);
       map.addLayer(marker);
+      return lat, lng;
     });
-    map.invalidateSize();
-    // map.remove();
   }
 }

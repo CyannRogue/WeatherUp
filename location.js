@@ -1,7 +1,7 @@
 class Fetch {
   async getCurrent(input) {
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${API_KEY}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${input}&units=metric&appid=${API_KEY}`
     );
     const data = await response.json();
     console.log(data);
@@ -15,14 +15,38 @@ class Fetch {
   }
 }
 
-const locate = () => {
-  navigator.geolocation.getCurrentPosition(position => {
-    const { latitude } = position.coords;
-    const { longitude } = position.coords;
-
-    const coords = [latitude, longitude];
-
-    return coords;
+function mapLocateWeather(lat, lon) {
+  var platform = new H.service.Platform({
+    apikey: `${geolocationKey}`,
   });
-  return coords;
-};
+  var service = platform.getSearchService();
+  service.reverseGeocode(
+    {
+      at: `${lat},${lon}`,
+    },
+
+    result => {
+      result.items.forEach(item => {
+        const arr = item.address.label;
+        const addressData = arr.split(",");
+        console.log(addressData);
+
+        fetch(
+          `https://api.openweathermap.org/data/2.5/weather?q=${addressData[1]}&units=metric&appid=${API_KEY}`
+        )
+          .then(response => response.json())
+          .then(data => console.log(data));
+        return data;
+      });
+    },
+    alert
+  );
+}
+
+// Array [ "M3, Zonnebloem, 7925, South Africa" ]
+// ​
+// 0: "M3, Zonnebloem, 7925, South Africa"
+// ​
+// length: 1
+// ​
+// <prototype>: Array []
