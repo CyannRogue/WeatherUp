@@ -4,3 +4,5 @@ const token =
 const API_KEY = "fae18fde014c9c9a7547db951e97d9c3";
 
 const geolocationKey = `agRGKUIupQIezmww3sZ-C8CgiXAW61qeZfxej-z9vQ8`;
+
+const ipdataKey = `a56970c3393c6e3d25ea99381cf719aaa15a0d6c0f7e9aebbcefbd5c`;
