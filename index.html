@@ -31,6 +31,7 @@
     <title>WeatherUp</title>
   </head>
   <body class="web mobile">
+    <div class="mapLocator"></div>
     <div id="map"></div>
     <section class="top">
       <a href="#" class="logo">WeatherUp</a>
@@ -47,7 +48,7 @@
       <!-- // data -->
     </section>
     <section class="middle2">
-      <div class="search">
+      <div class="search" autocomplete="off">
         <input type="text" placeholder="Search" id="searchUser" />
       </div>
       <button type="button" name="submit" id="submit">Submit</button>
@@ -80,9 +81,10 @@
       referrerpolicy="no-referrer"
     ></script>
 
-    <script src="/token.js"></script>
-    <script src="/location.js"></script>
-    <script src="/ui.js"></script>
-    <script src="/script.js"></script>
+    <script src="token.js"></script>
+    <script src="city_names.js"></script>
+    <script src="location.js"></script>
+    <script src="ui.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

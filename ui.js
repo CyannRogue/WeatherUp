@@ -58,6 +58,7 @@ class UI {
   constructor() {
     this.uiContainer = document.getElementById("content");
     this.cityEl = document.querySelector("#city");
+    this.autoLocated = document.querySelector(".mapLocator");
   }
   populateUI(data) {
     this.uiContainer.innerHTML = `<div class="weather">
@@ -98,7 +99,7 @@ class UI {
       }
     ).addTo(map);
     let marker = L.marker(coordinates).addTo(map);
-
+    this.autoLocated.innerHTML = `<img id="locator" src="/icons/Locator.svg" />`;
     map.on("click", function (mapEvent) {
       map.removeLayer(marker);
       const { lat, lng } = mapEvent.latlng;

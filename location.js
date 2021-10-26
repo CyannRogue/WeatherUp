@@ -72,7 +72,7 @@ async function getUserWeather() {
     }
   ).addTo(map);
   let marker = L.marker(coordinates).addTo(map);
-
+  autoLocated.innerHTML = `<img id="locator" src="/icons/Locator.svg" />`;
   map.on("click", function (mapEvent) {
     map.removeLayer(marker);
     const { lat, lng } = mapEvent.latlng;

@@ -2,6 +2,7 @@
 
 const ft = new Fetch();
 const ui = new UI();
+const autoLocated = document.querySelector(".mapLocator");
 
 const uiContainer2 = document.getElementById("content");
 const cityEl2 = document.querySelector("#city");
