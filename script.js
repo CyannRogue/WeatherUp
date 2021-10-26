@@ -45,3 +45,7 @@ search.addEventListener("keypress", function (e) {
     });
   }
 });
+
+autoLocated.addEventListener("click", function (e) {
+  getUserWeather();
+});
