@@ -1,17 +1,23 @@
 class Fetch {
   async getCurrent(input) {
-    const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${input}&units=metric&appid=${API_KEY}`
-    );
-    const data = await response.json();
-    console.log(data);
+    try {
+      const response = await fetch(
+        `https://api.openweathermap.org/data/2.5/weather?q=${input}&units=metric&appid=${API_KEY}`
+      );
+      const data = await response.json();
+      console.log(data);
 
-    const { lat } = data.coord;
-    const { lon } = data.coord;
+      const { lat } = data.coord;
+      const { lon } = data.coord;
 
-    const coordinates = [lat, lon];
+      const coordinates = [lat, lon];
 
-    return data;
+      return data;
+    } catch (err) {
+      alert(`Didn't catch that...
+      Please Enter correct spelling
+      : ${err}`); // TypeError: failed to fetch
+    }
   }
 }
 
