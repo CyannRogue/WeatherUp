@@ -32,7 +32,7 @@ async function getUserWeather() {
     `https://api.openweathermap.org/data/2.5/weather?q=${userIP.city}&units=metric&appid=${API_KEY}`
   );
   let data = await WeatherResponse.json();
-
+  console.log(data);
   // load ui
   uiContainer2.innerHTML = `<div class="weather">
   <div class="temp-container">
@@ -83,4 +83,35 @@ async function getUserWeather() {
   });
   // wait 3 seconds
   await new Promise((resolve, reject) => setTimeout(resolve, 3000));
+}
+
+async function getForecast() {
+  // read IP JSON
+  let response = await fetch(`https://api.ipdata.co?api-key=${ipdataKey}`);
+  let userIP = await response.json();
+  console.log(userIP);
+  let { latitude, longitude } = userIP;
+  console.log(latitude, longitude);
+
+  let weatherForecast = await fetch(
+    `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude={part}&appid=${API_KEY}`
+  );
+  let data = await weatherForecast.json();
+  console.log(data);
+
+  let otherDayForecast = "";
+  data.daily.forEach((day, idx) => {
+    if ((idx = 0)) {
+    } else {
+      otherDayForecast += `<div class="forecast">
+      <img src="https://openweathermap.org/img/wn/${
+        day.weather[0].icon
+      }@2x.png" alt="icon" class="weather-icon" />
+      <div class="day">${window.moment(day.dt * 1000).format("ddd")}</div>
+    </div>`;
+    }
+  });
+  let weeklyForecast = document.querySelector(".week");
+
+  weeklyForecast.innerHTML = otherDayForecast;
 }

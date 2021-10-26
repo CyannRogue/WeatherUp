@@ -4,15 +4,7 @@ const dayEl = document.querySelector("#day");
 const monthEl = document.querySelector(".month");
 const dateEl = document.querySelector(".date");
 
-const days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
+const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 const months = [
   "January",
@@ -34,7 +26,7 @@ setInterval(() => {
   const date = time.getDate();
   const day = time.getDay();
   const year = time.getFullYear();
-  // const hour = time.getHours();
+  const hour = time.getHours();
   // const hoursIn12HrF = hour >= 13 ? hour % 12 : hour;
   // const minutes = time.getMinutes();
   // const ampm = hour >= 12 ? "PM" : "AM";
@@ -42,8 +34,7 @@ setInterval(() => {
   // timeEL.innerHTML =
   //   hoursIn12HrF + ":" + minutes + " " + `<span id="am-pm">${ampm}</span>`;
 
-  // dateEL.innerHTML =
-  //   days[day] + ", " + date + " " + months[month] + " " + year;
+  // dateEL.innerHTML = days[day] + ", " + date + " " + months[month] + " " + year;
 
   dayEl.innerHTML = `${days[day]}`;
   dateEl.innerHTML = `${date}`;
@@ -59,6 +50,8 @@ class UI {
     this.uiContainer = document.getElementById("content");
     this.cityEl = document.querySelector("#city");
     this.autoLocated = document.querySelector(".mapLocator");
+    this.otherDayForecast = "";
+    this.weeklyForecast = document.querySelector(".week");
   }
   populateUI(data) {
     this.uiContainer.innerHTML = `<div class="weather">
