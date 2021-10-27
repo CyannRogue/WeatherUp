@@ -12,20 +12,20 @@
 }
 
 .web {
-  background-image: linear-gradient(
-    to right bottom,
-    #845ec2,
-    #786bd0,
-    #6a77dc,
-    #5983e7,
-    #428ff0,
-    #2a9ef7,
-    #0facfc,
-    #00b9ff,
-    #00ccff,
-    #00ddfb,
-    #00edef,
-    #4ffbdf
+  background-image: radial-gradient(
+    circle,
+    #ff6e4a,
+    #f55e66,
+    #e2567c,
+    #c6558d,
+    #a55896,
+    #8b5a97,
+    #715a93,
+    #59598b,
+    #475680,
+    #3a5374,
+    #324e66,
+    #2f4858
   );
   overflow: hidden;
   height: 100vh;
@@ -207,6 +207,26 @@ input {
   */
 @media (min-width: 1281px) {
   /* CSS */
+  .web {
+    background-image: linear-gradient(
+      to right,
+      #ff6e4a,
+      #f55e66,
+      #e2567c,
+      #c6558d,
+      #a55896,
+      #8b5a97,
+      #715a93,
+      #59598b,
+      #475680,
+      #3a5374,
+      #324e66,
+      #2f4858
+    );
+    overflow: hidden;
+    height: 100vh;
+    color: #fff;
+  }
   .top,
   .last,
   .middle,

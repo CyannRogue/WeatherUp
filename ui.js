@@ -61,7 +61,7 @@ class UI {
     </div>
 
     <div class="condition">
-      <img src="icons/sun.svg" alt="icon" class="weather-icon" />
+    <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="icon" class="weather-icon" />
       <div class="title">${data.weather[0].description}</div>
       <div class="range">${data.main.temp_max}&degc / ${data.main.temp_min}&degc</div>
     </div>`;

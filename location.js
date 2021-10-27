@@ -26,13 +26,14 @@ async function getUserWeather() {
   // read IP JSON
   let response = await fetch(`https://api.ipdata.co?api-key=${ipdataKey}`);
   let userIP = await response.json();
-  console.log(userIP);
+  // console.log(userIP);
   // read Weather
   let WeatherResponse = await fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${userIP.city}&units=metric&appid=${API_KEY}`
   );
   let data = await WeatherResponse.json();
   console.log(data);
+  // console.log(data.weather[0].icon);
   // load ui
   uiContainer2.innerHTML = `<div class="weather">
   <div class="temp-container">
@@ -41,7 +42,7 @@ async function getUserWeather() {
   </div>
 
   <div class="condition">
-    <img src="icons/sun.svg" alt="icon" class="weather-icon" />
+    <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="icon" class="weather-icon" />
     <div class="title">${data.weather[0].description}</div>
     <div class="range">${data.main.temp_max}&degc / ${data.main.temp_min}&degc</div>
   </div>`;
@@ -89,15 +90,15 @@ async function getForecast() {
   // read IP JSON
   let response = await fetch(`https://api.ipdata.co?api-key=${ipdataKey}`);
   let userIP = await response.json();
-  console.log(userIP);
+  // console.log(userIP);
   let { latitude, longitude } = userIP;
-  console.log(latitude, longitude);
+  // console.log(latitude, longitude);
 
   let weatherForecast = await fetch(
     `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude={part}&appid=${API_KEY}`
   );
   let data = await weatherForecast.json();
-  console.log(data);
+  // console.log(data);
 
   let otherDayForecast = "";
   data.daily.forEach((day, idx) => {

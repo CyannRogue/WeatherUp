@@ -8,7 +8,7 @@ const uiContainer2 = document.getElementById("content");
 const cityEl2 = document.querySelector("#city");
 
 //page autoLoad
-getForecast();
+// getForecast();
 window.onload = () => {
   getUserWeather();
 };
