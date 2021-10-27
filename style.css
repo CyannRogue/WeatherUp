@@ -167,16 +167,16 @@ input {
   font-weight: 700;
 }
 
-.forecast .weather-icon,
-.forecast .day {
-  width: 2.5rem;
-  height: auto;
+.forecast {
   text-align: center;
   margin: 0 20px;
   justify-content: center;
 }
 
-.week {
+.wIcon {
+}
+
+.main {
   flex-direction: row;
 }
 @keyframes yourAnimation {
@@ -259,6 +259,25 @@ input {
     justify-content: center;
     align-items: center;
   }
+  .forecast {
+    text-align: center;
+    margin: 0 20px;
+    justify-content: center;
+  }
+
+  .wIcon {
+    font-size: 2rem;
+  }
+
+  .fontS {
+    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+  }
+
+  .weather-icon {
+    font-size: 5rem;
+  }
 
   .temp {
     font-size: 4rem;
@@ -319,6 +338,26 @@ input {
 
 @media (min-width: 1025px) and (max-width: 1280px) {
   /* CSS */
+  .web {
+    background-image: linear-gradient(
+      to right,
+      #ff6e4a,
+      #f55e66,
+      #e2567c,
+      #c6558d,
+      #a55896,
+      #8b5a97,
+      #715a93,
+      #59598b,
+      #475680,
+      #3a5374,
+      #324e66,
+      #2f4858
+    );
+    overflow: hidden;
+    height: 100vh;
+    color: #fff;
+  }
 
   .top,
   .last,
@@ -379,6 +418,26 @@ input {
   }
   .mapLocator:hover {
     transform: scale(1.2);
+  }
+
+  .forecast {
+    text-align: center;
+    margin: 0 20px;
+    justify-content: center;
+  }
+
+  .wIcon {
+    font-size: 2rem;
+  }
+
+  .fontS {
+    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+  }
+
+  .weather-icon {
+    font-size: 5rem;
   }
 
   .mapLocator:active {
@@ -474,6 +533,25 @@ input {
   }
   .mapLocator {
     display: none;
+  }
+  .forecast {
+    text-align: center;
+    margin: 0 20px;
+    justify-content: center;
+  }
+
+  .wIcon {
+    font-size: 2rem;
+  }
+
+  .fontS {
+    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+  }
+
+  .weather-icon {
+    font-size: 5rem;
   }
 }
 
@@ -583,6 +661,25 @@ input {
     width: 65%;
     border-radius: 20px;
   }
+  .forecast {
+    text-align: center;
+    margin: 0 20px;
+    justify-content: center;
+  }
+
+  .wIcon {
+    font-size: 2rem;
+  }
+
+  .fontS {
+    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+  }
+
+  .weather-icon {
+    font-size: 5rem;
+  }
 }
 
 /* 
@@ -672,5 +769,24 @@ input {
   }
   .mapLocator {
     display: none;
+  }
+  .forecast {
+    text-align: center;
+    margin: 0 20px;
+    justify-content: center;
+  }
+
+  .wIcon {
+    font-size: 2rem;
+  }
+
+  .fontS {
+    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+  }
+
+  .weather-icon {
+    font-size: 5rem;
   }
 }

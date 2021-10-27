@@ -42,11 +42,23 @@ async function getUserWeather() {
   </div>
 
   <div class="condition">
-    <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="icon" class="weather-icon" />
+  <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="icon" class="weather-icon" />
     <div class="title">${data.weather[0].description}</div>
     <div class="range">${data.main.temp_max}&degc / ${data.main.temp_min}&degc</div>
   </div>`;
   cityEl2.innerHTML = `${data.name}`;
+  main.innerHTML = ` <div class="forecast">
+    <i class="fas fa-tint wIcon"></i>
+    <div class="Humidity fontS">${data.main.humidity}</div>
+  </div>
+  <div class="forecast">
+    <i class="fas fa-tachometer-alt wIcon"></i>
+    <div class="Pressure fontS">${data.main.pressure}</div>
+  </div>
+  <div class="forecast">
+    <i class="fas fa-wind wIcon"></i>
+    <div class="WindSpeed fontS">${data.wind.speed}</div>
+  </div>`;
 
   //Map update
   const { lat } = data.coord;

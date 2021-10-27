@@ -3,6 +3,7 @@ const cityEl = document.querySelector("#city");
 const dayEl = document.querySelector("#day");
 const monthEl = document.querySelector(".month");
 const dateEl = document.querySelector(".date");
+const main = document.querySelector(".main");
 
 const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
@@ -51,9 +52,10 @@ class UI {
     this.cityEl = document.querySelector("#city");
     this.autoLocated = document.querySelector(".mapLocator");
     this.otherDayForecast = "";
-    this.weeklyForecast = document.querySelector(".week");
+    this.main = document.querySelector(".main");
   }
   populateUI(data) {
+    console.log(data);
     this.uiContainer.innerHTML = `<div class="weather">
     <div class="temp-container">
       <div class="temp">${data.main.temp}&degc</div>
@@ -66,6 +68,18 @@ class UI {
       <div class="range">${data.main.temp_max}&degc / ${data.main.temp_min}&degc</div>
     </div>`;
     this.cityEl.innerHTML = `${data.name}`;
+    this.main.innerHTML = ` <div class="forecast">
+    <i class="fas fa-tint wIcon"></i>
+    <div class="Humidity fontS">${data.main.humidity}</div>
+  </div>
+  <div class="forecast">
+    <i class="fas fa-tachometer-alt wIcon"></i>
+    <div class="Pressure fontS">${data.main.pressure}</div>
+  </div>
+  <div class="forecast">
+    <i class="fas fa-wind wIcon"></i>
+    <div class="WindSpeed fontS">${data.wind.speed}</div>
+  </div>`;
   }
   mapUI(data) {
     const { lat } = data.coord;
