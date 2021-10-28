@@ -471,6 +471,28 @@ input {
 
 @media (min-width: 768px) and (max-width: 1024px) {
   /* CSS */
+
+  .web {
+    background-image: radial-gradient(
+      circle,
+      #ff6e4a,
+      #f55e66,
+      #e2567c,
+      #c6558d,
+      #a55896,
+      #8b5a97,
+      #715a93,
+      #59598b,
+      #475680,
+      #3a5374,
+      #324e66,
+      #2f4858
+    );
+    overflow: hidden;
+    height: 100vh;
+    color: #fff;
+  }
+
   * {
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
@@ -562,6 +584,27 @@ input {
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   /* CSS */
+  .web {
+    background-image: linear-gradient(
+      to right,
+      #ff6e4a,
+      #f55e66,
+      #e2567c,
+      #c6558d,
+      #a55896,
+      #8b5a97,
+      #715a93,
+      #59598b,
+      #475680,
+      #3a5374,
+      #324e66,
+      #2f4858
+    );
+    overflow: hidden;
+    height: 100vh;
+    color: #fff;
+  }
+
   .top,
   .last,
   .middle,
@@ -713,6 +756,27 @@ input {
     -o-transition: all 1s ease;
     transition: all 1s ease;
   }
+  .web {
+    background-image: radial-gradient(
+      circle,
+      #ff6e4a,
+      #f55e66,
+      #e2567c,
+      #c6558d,
+      #a55896,
+      #8b5a97,
+      #715a93,
+      #59598b,
+      #475680,
+      #3a5374,
+      #324e66,
+      #2f4858
+    );
+    overflow: hidden;
+    height: 100vh;
+    color: #fff;
+  }
+
   .condition,
   .forecast .weather-icon,
   section,
