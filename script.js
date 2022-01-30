@@ -10,12 +10,11 @@ const cityEl2 = document.querySelector("#city");
 //page autoLoad
 // getForecast();
 window.onload = () => {
-  setTimeout(function () {
-    alert("Press F11 to toggle full screen mode");
-  }, 1);
   getUserWeather();
 };
-
+setTimeout(function () {
+  alert("Press F11 to toggle full screen mode");
+}, 1);
 //events
 
 const search = document.getElementById("searchUser");
