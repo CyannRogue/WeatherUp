@@ -10,7 +10,9 @@ const cityEl2 = document.querySelector("#city");
 //page autoLoad
 // getForecast();
 window.onload = () => {
-  alert("Press F11 to toggle full screen mode");
+  setTimeout(function () {
+    alert("Press F11 to toggle full screen mode");
+  }, 1);
   getUserWeather();
 };
 
