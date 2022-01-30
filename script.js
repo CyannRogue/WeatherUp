@@ -52,4 +52,4 @@ autoLocated.addEventListener("click", function (e) {
 
 setTimeout(function () {
   alert("Press F11 to toggle full screen mode");
-}, 1);
+}, 10);
