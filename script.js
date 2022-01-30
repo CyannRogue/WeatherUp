@@ -12,9 +12,7 @@ const cityEl2 = document.querySelector("#city");
 window.onload = () => {
   getUserWeather();
 };
-setTimeout(function () {
-  alert("Press F11 to toggle full screen mode");
-}, 1);
+
 //events
 
 const search = document.getElementById("searchUser");
@@ -51,3 +49,7 @@ search.addEventListener("keypress", function (e) {
 autoLocated.addEventListener("click", function (e) {
   getUserWeather();
 });
+
+setTimeout(function () {
+  alert("Press F11 to toggle full screen mode");
+}, 1);
